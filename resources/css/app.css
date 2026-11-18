@@ -1,0 +1,377 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =========================================
+   CANDLE SHOP - LUXURY DESIGN SYSTEM
+========================================= */
+
+:root {
+    --candle-ivory: #F7F2EA;
+    --candle-cream: #FBF9F5;
+    --candle-white: #FFFFFF;
+    --candle-champagne: #D8C4AC;
+    --candle-brown: #70452F;
+    --candle-dark: #30241E;
+    --candle-gold: #B79A73;
+    --candle-muted: #887B70;
+    --candle-border: #E8DED2;
+    --candle-danger: #A94442;
+    --candle-success: #52765B;
+
+    --candle-radius: 12px;
+    --candle-shadow: 0 8px 28px rgba(48, 36, 30, 0.06);
+    --candle-transition: all .25s ease;
+}
+
+/* Font chữ và nền tổng thể */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--candle-ivory);
+    color: var(--candle-dark);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'DM Sans', serif;
+    color: var(--candle-dark);
+    line-height: 1.3;
+}
+
+/* Liên kết */
+
+a {
+    transition: var(--candle-transition);
+}
+
+/* Tiêu đề trang */
+
+.candle-page-title {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--candle-dark);
+}
+
+.candle-page-subtitle {
+    color: var(--candle-muted);
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.candle-eyebrow {
+    color: var(--candle-gold);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+}
+
+/* Container */
+
+.candle-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 32px 28px;
+}
+
+/* Card */
+
+.candle-card {
+    background: var(--candle-white);
+    border: 1px solid var(--candle-border);
+    border-radius: var(--candle-radius);
+    padding: 24px;
+    box-shadow: var(--candle-shadow);
+}
+
+.candle-card-hover {
+    transition: var(--candle-transition);
+}
+
+.candle-card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 35px rgba(48, 36, 30, 0.10);
+}
+
+/* Nút bấm */
+
+.candle-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 11px 20px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: var(--candle-transition);
+    text-decoration: none;
+}
+
+.candle-btn-primary {
+    background: var(--candle-brown);
+    color: white;
+}
+
+.candle-btn-primary:hover {
+    background: var(--candle-dark);
+    color: white;
+    transform: translateY(-1px);
+}
+
+.candle-btn-secondary {
+    background: var(--candle-ivory);
+    color: var(--candle-brown);
+    border-color: var(--candle-border);
+}
+
+.candle-btn-secondary:hover {
+    background: var(--candle-champagne);
+}
+
+.candle-btn-danger {
+    background: var(--candle-danger);
+    color: white;
+}
+
+.candle-btn-danger:hover {
+    background: #873532;
+    color: white;
+}
+
+/* Form */
+
+.candle-input,
+.candle-select,
+.candle-textarea {
+    width: 100%;
+    border: 1px solid var(--candle-border);
+    border-radius: 8px;
+    background: white;
+    color: var(--candle-dark);
+    padding: 11px 13px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    transition: var(--candle-transition);
+}
+
+.candle-input:focus,
+.candle-select:focus,
+.candle-textarea:focus {
+    outline: none;
+    border-color: var(--candle-gold);
+    box-shadow: 0 0 0 3px rgba(183, 154, 115, .15);
+}
+
+.candle-input::placeholder,
+.candle-textarea::placeholder {
+    color: #B4A99E;
+}
+
+.candle-label {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--candle-dark);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* Bảng dữ liệu */
+
+.candle-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    background: white;
+    border: 1px solid var(--candle-border);
+    border-radius: var(--candle-radius);
+}
+
+.candle-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.candle-table th {
+    background: var(--candle-ivory);
+    color: var(--candle-brown);
+    font-weight: 700;
+    text-align: left;
+    padding: 15px;
+    white-space: nowrap;
+}
+
+.candle-table td {
+    padding: 14px 15px;
+    border-top: 1px solid var(--candle-border);
+    color: var(--candle-dark);
+}
+
+.candle-table tbody tr:hover {
+    background: #FCFAF7;
+}
+
+/* Badge trạng thái */
+
+.candle-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.candle-badge-success {
+    background: #EAF2EA;
+    color: var(--candle-success);
+}
+
+.candle-badge-warning {
+    background: #F8F0DF;
+    color: #96713C;
+}
+
+.candle-badge-danger {
+    background: #F8E9E7;
+    color: var(--candle-danger);
+}
+
+.candle-badge-neutral {
+    background: #F0ECE7;
+    color: var(--candle-muted);
+}
+
+/* Thống kê dashboard */
+
+.candle-stat-card {
+    background: white;
+    border: 1px solid var(--candle-border);
+    border-radius: var(--candle-radius);
+    padding: 22px;
+    box-shadow: var(--candle-shadow);
+}
+
+.candle-stat-label {
+    color: var(--candle-muted);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.candle-stat-value {
+    margin-top: 10px;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--candle-brown);
+    font-size: 28px;
+    font-weight: 700;
+}
+
+/* Sản phẩm */
+
+.candle-product-card {
+    overflow: hidden;
+    background: white;
+    border: 1px solid var(--candle-border);
+    border-radius: var(--candle-radius);
+    transition: var(--candle-transition);
+}
+
+.candle-product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(48, 36, 30, .10);
+}
+
+.candle-product-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    background: var(--candle-ivory);
+}
+
+.candle-product-name {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--candle-dark);
+}
+
+.candle-product-price {
+    color: var(--candle-brown);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* Thông báo */
+
+.candle-alert {
+    padding: 14px 17px;
+    border-radius: 9px;
+    font-size: 13px;
+    margin-bottom: 18px;
+}
+
+.candle-alert-success {
+    background: #EAF2EA;
+    color: #3F6848;
+    border: 1px solid #D3E5D4;
+}
+
+.candle-alert-error {
+    background: #F8E9E7;
+    color: #963E3B;
+    border: 1px solid #EED1CE;
+}
+
+/* Phân trang */
+
+.candle-pagination {
+    margin-top: 24px;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .candle-container {
+        padding: 22px 15px;
+    }
+
+    .candle-page-title {
+        font-size: 25px;
+    }
+
+    .candle-card {
+        padding: 17px;
+    }
+
+    .candle-stat-card {
+        padding: 17px;
+    }
+
+    .candle-stat-value {
+        font-size: 23px;
+    }
+
+    .candle-table {
+        min-width: 700px;
+    }
+}
+
+/* Toàn bộ website sử dụng DM Sans */
+html,
+body,
+body *,
+button,
+input,
+select,
+textarea {
+    font-family: 'DM Sans', sans-serif !important;
+}
